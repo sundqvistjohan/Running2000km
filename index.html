@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Running 2000 km</title>
+</head>
+<body>
+    <script>
+        const startDistance = 1726.8;
+        const finalDistance = 2000;
+        const startDate = new Date(2019, 10, 13)
+        const finalDate = new Date (2020, 0, 1)
+        const oneDay = 24 * 60 * 60 * 1000;
+        const diffDays = Math.round(Math.abs((finalDate-startDate) / oneDay));
+        
+        document.writeln(`Days remaining in the year: ${diffDays}\n`)
+        document.writeln(`Distance left to reach goal of 2000 km: ${(finalDistance-startDistance).toFixed(2)}\n`);
+        document.writeln(`Average distance per day to reach goal: ${((finalDistance-startDistance) / diffDays).toFixed(2)}`);
+    </script>    
+</body>
+</html>
